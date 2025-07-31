@@ -2,8 +2,8 @@
 	"name": "hydra-terminal",
 	"displayName": "Hydra Terminal",
 	"description": "Automatically capture terminal output and send to LLM for analysis",
-	"version": "1.0.1",
-	"publisher": "Hydra",
+	"version": "1.0.2",
+	"publisher": "Hydra by Pratik Bali",
 	"icon": "hydra-terminal-logo-main.png",
 	"author": {
 		"name": "Pratik Bali",
