@@ -2,7 +2,7 @@
 	"name": "hydra-terminal",
 	"displayName": "Hydra Terminal",
 	"description": "Automatically capture terminal output and send to LLM for analysis",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"publisher": "Hydra",
 	"author": {
 		"name": "Pratik Bali",

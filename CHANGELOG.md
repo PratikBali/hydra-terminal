@@ -2,10 +2,10 @@
 
 All notable changes to the "Hydra Terminal" extension will be documented in this file.
 
-## [0.0.1] - 2025-07-30
+## [1.0.0] - 2025-07-31
 
 ### Added
-- Initial release of Hydra Terminal
+- Initial stable release of Hydra Terminal
 - Automatic terminal output monitoring and capture
 - Integration with LLM services for error analysis
 - Configurable trigger keywords for automatic detection
