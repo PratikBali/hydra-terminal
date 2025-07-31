@@ -2,6 +2,16 @@
 
 All notable changes to the "Hydra Terminal" extension will be documented in this file.
 
+## [1.0.1] - 2025-07-31
+
+### Added
+- Added official Hydra Terminal logo icon
+- Improved visual branding and extension identification
+
+### Changed
+- Updated extension icon to custom Hydra Terminal logo
+- Enhanced package presentation in VS Code marketplace
+
 ## [1.0.0] - 2025-07-31
 
 ### Added
