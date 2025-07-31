@@ -1,0 +1,137 @@
+{
+	"name": "hydra-terminal",
+	"displayName": "Hydra Terminal",
+	"description": "Automatically capture terminal output and send to LLM for analysis",
+	"version": "0.0.1",
+	"publisher": "Hydra",
+	"author": {
+		"name": "Pratik Bali",
+		"email": "pratik.bali@outlook.com"
+	},
+	"license": "MIT",
+	"homepage": "https://github.com/pratikbali/hydra-terminal",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/pratikbali/hydra-terminal.git"
+	},
+	"bugs": {
+		"url": "https://github.com/pratikbali/hydra-terminal/issues"
+	},
+	"keywords": [
+		"hydra",
+		"automatic",
+		"automatically",
+		"capture",
+		"copy",
+		"terminal",
+		"command-prompt",
+		"powershell",
+		"output",
+		"copilot",
+		"llm",
+		"ai",
+		"agent",
+		"analysis",
+		"debugging",
+		"error-handling"
+	],
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "Hydra Terminal",
+			"properties": {
+				"terminalCopilot.autoCopy": {
+					"type": "boolean",
+					"default": true,
+					"description": "Automatically copy terminal output to clipboard"
+				},
+				"terminalCopilot.autoSendToLLM": {
+					"type": "boolean",
+					"default": false,
+					"description": "Automatically send terminal output to LLM for analysis"
+				},
+				"terminalCopilot.triggerKeywords": {
+					"type": "array",
+					"default": [
+						"error",
+						"failed",
+						"npm ERR!",
+						"warning",
+						"deprecated"
+					],
+					"description": "Keywords that trigger automatic analysis"
+				},
+				"terminalCopilot.maxOutputLength": {
+					"type": "number",
+					"default": 5000,
+					"description": "Maximum length of terminal output to capture"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "terminalCopilot.analyzeLastOutput",
+				"title": "Analyze Last Terminal Output",
+				"category": "Hydra Terminal"
+			},
+			{
+				"command": "terminalCopilot.copyLastOutput",
+				"title": "Copy Last Terminal Output",
+				"category": "Hydra Terminal"
+			},
+			{
+				"command": "terminalCopilot.toggleAutoCopy",
+				"title": "Toggle Auto Copy",
+				"category": "Hydra Terminal"
+			},
+			{
+				"command": "terminalCopilot.toggleAutoLLM",
+				"title": "Toggle Auto LLM Analysis",
+				"category": "Hydra Terminal"
+			},
+			{
+				"command": "terminalCopilot.captureNow",
+				"title": "Capture Terminal Output Now",
+				"category": "Hydra Terminal"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "terminalCopilot.analyzeLastOutput",
+				"key": "ctrl+shift+t",
+				"mac": "cmd+shift+t"
+			},
+			{
+				"command": "terminalCopilot.copyLastOutput",
+				"key": "ctrl+shift+c",
+				"mac": "cmd+shift+c"
+			},
+			{
+				"command": "terminalCopilot.captureNow",
+				"key": "ctrl+shift+x",
+				"mac": "cmd+shift+x"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"package": "vsce package",
+		"publish": "vsce publish"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.74.0",
+		"@types/node": "16.x",
+		"typescript": "^4.9.4"
+	}
+}

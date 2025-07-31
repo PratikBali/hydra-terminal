@@ -1,0 +1,28 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# TypeScript and JavaScript files
+*.ts text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+
+# Markdown and documentation
+*.md text eol=lf
+*.txt text eol=lf
+
+# Configuration files
+.gitignore text eol=lf
+.gitattributes text eol=lf
+.vscodeignore text eol=lf
+tsconfig.json text eol=lf
+
+# Binary files
+*.vsix binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+
+# VS Code specific
+*.code-workspace text eol=lf
