@@ -3,7 +3,7 @@ import { TerminalCopilotProvider } from "./terminal-copilot";
 import { TerminalMonitor } from "./terminal-monitor";
 
 export function activate(context: vscode.ExtensionContext) {
-	console.log("Terminal Copilot extension is now active!");
+	console.log("Hydra Terminal extension is now active!");
 
 	try {
 		const terminalCopilot = new TerminalCopilotProvider(context);
@@ -38,7 +38,7 @@ export function activate(context: vscode.ExtensionContext) {
 				try {
 					await handler();
 				} catch (error) {
-					vscode.window.showErrorMessage(`Terminal Copilot: ${error}`);
+					vscode.window.showErrorMessage(`Hydra Terminal: ${error}`);
 					console.error(`Error in ${command}:`, error);
 				}
 			});
@@ -50,7 +50,7 @@ export function activate(context: vscode.ExtensionContext) {
 		// Show activation message with quick setup
 		vscode.window
 			.showInformationMessage(
-				"Terminal Copilot is active! 🚀",
+				"Hydra Terminal is active! 🚀",
 				"Quick Setup",
 				"View Commands",
 				"Settings"
@@ -63,7 +63,7 @@ export function activate(context: vscode.ExtensionContext) {
 					case "View Commands":
 						vscode.commands.executeCommand(
 							"workbench.action.showCommands",
-							"Terminal Copilot"
+							"Hydra Terminal"
 						);
 						break;
 					case "Settings":
@@ -76,7 +76,7 @@ export function activate(context: vscode.ExtensionContext) {
 			});
 	} catch (error) {
 		vscode.window.showErrorMessage(
-			`Failed to activate Terminal Copilot: ${error}`
+			`Failed to activate Hydra Terminal: ${error}`
 		);
 		console.error("Activation error:", error);
 	}
@@ -85,7 +85,7 @@ export function activate(context: vscode.ExtensionContext) {
 function showQuickSetup() {
 	const panel = vscode.window.createWebviewPanel(
 		"terminalCopilotSetup",
-		"Terminal Copilot Setup",
+		"Hydra Terminal Setup",
 		vscode.ViewColumn.One,
 		{ enableScripts: true }
 	);
@@ -96,7 +96,7 @@ function showQuickSetup() {
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Terminal Copilot Setup</title>
+            <title>Hydra Terminal Setup</title>
             <style>
                 body { font-family: var(--vscode-font-family); padding: 20px; }
                 .feature { margin: 15px 0; padding: 10px; border: 1px solid var(--vscode-panel-border); }
@@ -104,7 +104,7 @@ function showQuickSetup() {
             </style>
         </head>
         <body>
-            <h1>🚀 Terminal Copilot Quick Setup</h1>
+            <h1>🚀 Hydra Terminal Quick Setup</h1>
             
             <div class="feature">
                 <h3>📋 Auto Copy Terminal Output</h3>
@@ -146,5 +146,5 @@ function showQuickSetup() {
 }
 
 export function deactivate() {
-	console.log("Terminal Copilot extension deactivated");
+	console.log("Hydra Terminal extension deactivated");
 }

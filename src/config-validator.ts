@@ -9,7 +9,7 @@ export class ConfigValidator {
 						const keywords = config.get<string[]>('triggerKeywords', []);
 						if (!Array.isArray(keywords) || keywords.length === 0) {
 								vscode.window.showWarningMessage(
-										'Terminal Copilot: Invalid trigger keywords configuration. Using defaults.'
+										'Hydra Terminal: Invalid trigger keywords configuration. Using defaults.'
 								);
 								return false;
 						}
@@ -18,14 +18,14 @@ export class ConfigValidator {
 						const maxLength = config.get<number>('maxOutputLength', 5000);
 						if (typeof maxLength !== 'number' || maxLength < 100 || maxLength > 50000) {
 								vscode.window.showWarningMessage(
-										'Terminal Copilot: Invalid max output length. Must be between 100-50000 characters.'
+										'Hydra Terminal: Invalid max output length. Must be between 100-50000 characters.'
 								);
 								return false;
 						}
 
 						return true;
 				} catch (error) {
-						vscode.window.showErrorMessage(`Terminal Copilot: Configuration validation failed: ${error}`);
+						vscode.window.showErrorMessage(`Hydra Terminal: Configuration validation failed: ${error}`);
 						return false;
 				}
 		}

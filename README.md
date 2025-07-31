@@ -30,22 +30,22 @@ Configure Hydra Terminal through VS Code settings:minal** is a VS Code extension
 1. Install the extension
 2. Open a terminal in VS Code
 3. Run commands that might produce errors
-4. Watch Terminal Copilot automatically detect and capture issues
+4. Watch Hydra Terminal automatically detect and capture issues
 5. Use `Ctrl+Shift+T` to analyze with LLM
 
 ## Commands
 
 | Command | Shortcut | Description |
 |---------|----------|-------------|
-| `Terminal Copilot: Analyze Last Output` | `Ctrl+Shift+T` | Analyze the last terminal output with LLM |
-| `Terminal Copilot: Copy Last Output` | `Ctrl+Shift+C` | Copy terminal output to clipboard |
-| `Terminal Copilot: Capture Terminal Output Now` | `Ctrl+Shift+X` | Manually capture current terminal output |
-| `Terminal Copilot: Toggle Auto Copy` | - | Enable/disable automatic clipboard copying |
-| `Terminal Copilot: Toggle Auto LLM Analysis` | - | Enable/disable automatic LLM analysis |
+| `Hydra Terminal: Analyze Last Output` | `Ctrl+Shift+T` | Analyze the last terminal output with LLM |
+| `Hydra Terminal: Copy Last Output` | `Ctrl+Shift+C` | Copy terminal output to clipboard |
+| `Hydra Terminal: Capture Terminal Output Now` | `Ctrl+Shift+X` | Manually capture current terminal output |
+| `Hydra Terminal: Toggle Auto Copy` | - | Enable/disable automatic clipboard copying |
+| `Hydra Terminal: Toggle Auto LLM Analysis` | - | Enable/disable automatic LLM analysis |
 
 ## Configuration
 
-Configure Terminal Copilot through VS Code settings:
+Configure Hydra Terminal through VS Code settings:
 
 ```json
 {

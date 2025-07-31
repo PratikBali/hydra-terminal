@@ -17,7 +17,7 @@ export class TerminalCopilotProvider implements vscode.Disposable {
     private statusBarItem!: vscode.StatusBarItem;
 
     constructor(private context: vscode.ExtensionContext) {
-        this.outputChannel = vscode.window.createOutputChannel('Terminal Copilot');
+        this.outputChannel = vscode.window.createOutputChannel('Hydra Terminal');
         this.setupStatusBar();
         this.setupTerminalWatcher();
         
@@ -31,7 +31,7 @@ export class TerminalCopilotProvider implements vscode.Disposable {
             100
         );
         this.statusBarItem.command = 'terminalCopilot.captureNow';
-        this.statusBarItem.text = '$(eye) Terminal Copilot';
+        this.statusBarItem.text = '$(eye) Hydra Terminal';
         this.statusBarItem.tooltip = 'Click to capture terminal output now';
         this.statusBarItem.show();
     }
@@ -95,10 +95,10 @@ export class TerminalCopilotProvider implements vscode.Disposable {
 
     private updateStatusBar() {
         if (this.activeTerminal) {
-            this.statusBarItem.text = '$(eye) Terminal Copilot';
+            this.statusBarItem.text = '$(eye) Hydra Terminal';
             this.statusBarItem.tooltip = `Monitoring: ${this.activeTerminal.name} (Click to capture)`;
         } else {
-            this.statusBarItem.text = '$(eye-closed) Terminal Copilot';
+            this.statusBarItem.text = '$(eye-closed) Hydra Terminal';
             this.statusBarItem.tooltip = 'No active terminal (Click to capture)';
         }
     }
@@ -320,7 +320,7 @@ Focus on actionable solutions and explanations.`;
     }
 
     private showStatusMessage(message: string) {
-        vscode.window.setStatusBarMessage(`Terminal Copilot: ${message}`, 3000);
+        vscode.window.setStatusBarMessage(`Hydra Terminal: ${message}`, 3000);
     }
 
     // Public methods for commands

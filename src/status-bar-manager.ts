@@ -37,10 +37,10 @@ export class StatusBarManager {
 
 		private updateStatusBar() {
 				const icon = this.isMonitoring ? '$(eye)' : '$(eye-closed)';
-				this.statusBarItem.text = `${icon} Terminal Copilot`;
+				this.statusBarItem.text = `${icon} Hydra Terminal`;
 				this.statusBarItem.tooltip = this.isMonitoring 
-						? 'Terminal Copilot is monitoring (Click to capture now)'
-						: 'Terminal Copilot is idle (Click to capture now)';
+						? 'Hydra Terminal is monitoring (Click to capture now)'
+						: 'Hydra Terminal is idle (Click to capture now)';
 		}
 
 		public dispose() {
